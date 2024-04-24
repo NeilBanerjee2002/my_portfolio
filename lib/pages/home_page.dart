@@ -1,5 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/colors.dart';
+import 'package:portfolio/constants/navtitles.dart';
+import 'package:portfolio/widgets/HeaderDesktop.dart';
+import 'package:portfolio/widgets/sitelogo.dart';
+
+import '../widgets/HeaderMobile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,36 +15,24 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       backgroundColor: CustomColor.scaffoldBG,
+      endDrawer: Drawer(
+        backgroundColor: CustomColor.scaffoldBG,
+      ),
       body: ListView(
+        scrollDirection: Axis.vertical,
         children: [
-          Container(
-            height: 500,
-            width: double.maxFinite,
-            child: Row(
-              children: [
-                Text("Neil"),
-                Spacer(),
-                for(int i=0; i < 5; i++)
-                  TextButton(onPressed: (){}, child: Text("Button"))
-              ],
-            ),
-          ),
-          Container(
-            height: 500,
-            color: Colors.white,
-            width: double.maxFinite,
-          ),
-          Container(
-            height: 500,
-            width: double.maxFinite,
-          ),
+          //HeaderDesktop()
+          HeaderMobile(onMenuTap: (){scaffoldKey.currentState?.openEndDrawer();},
+          onLogoTap: (){},)
         ],
       ),
     );
   }
 }
-
