@@ -19,8 +19,8 @@ class HeaderDesktop extends StatelessWidget {
         children: [
           SiteLogo(onTap: (){}),
           const Spacer(),
-          for(int i=0; i < NavTitles.length; i++)
-            TextButton(onPressed: (){}, child: Text(NavTitles[i], style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w800),))
+          for(int i=0; i < navTitles.length; i++)
+            TextButton(onPressed: (){}, child: Text(navTitles[i], style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w800),))
         ],
       ),
     );
