@@ -1,0 +1,1 @@
+const double KMinSize = 600;
