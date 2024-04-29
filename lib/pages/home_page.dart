@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/constants/colors.dart';
 import 'package:portfolio/widgets/drawer_mobile.dart';
 import 'package:portfolio/widgets/main_desktop.dart';
+import 'package:portfolio/widgets/main_mobile.dart';
 
 import '../constants/size.dart';
 import '../widgets/HeaderDesktop.dart';
@@ -37,7 +38,10 @@ class _HomePageState extends State<HomePage> {
                 },
                 onLogoTap: () {},
               ),
-            const MainDesktop()
+            if (constraints.maxWidth > KMinSize)
+              const MainDesktop()
+            else
+              const MainMobile()
           ],
         ),
       );
