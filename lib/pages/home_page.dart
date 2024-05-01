@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
@@ -7,6 +8,7 @@ import 'package:portfolio/constants/skill_items.dart';
 import 'package:portfolio/widgets/drawer_mobile.dart';
 import 'package:portfolio/widgets/main_desktop.dart';
 import 'package:portfolio/widgets/main_mobile.dart';
+import 'package:portfolio/widgets/skills.mobile.dart';
 import 'package:portfolio/widgets/skills_desktop.dart';
 
 import '../constants/size.dart';
@@ -60,7 +62,10 @@ class _HomePageState extends State<HomePage> {
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
-                  const SkillsDesktop()
+                  if(constraints.maxWidth > kMedDesktopWidth)
+                    const SkillsDesktop()
+                  else
+                    const SkillsMobile()
                 ],
               ),
             ),
