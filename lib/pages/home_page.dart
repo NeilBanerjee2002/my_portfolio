@@ -54,21 +54,23 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.fromLTRB(25, 20, 25, 60),
               width: MediaQuery.of(context).size.width,
               color: Colors.black,
-              child: Column(
-                children: [
-                  Text(
-                    "Skills",
-                    style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                  ),
-                  SizedBox(height: 50,),
-                  if(constraints.maxWidth > KMinSize)
-                    const SkillsDesktop()
-                  else
-                    const SkillsMobile()
-                ],
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Text(
+                      "Skills",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                    SizedBox(height: 50,),
+                    if(constraints.maxWidth > KMinSize)
+                      const SkillsDesktop()
+                    else
+                      const SkillsMobile()
+                  ],
+                ),
               ),
             ),
           ],

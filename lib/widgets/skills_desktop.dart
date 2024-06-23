@@ -57,7 +57,7 @@ class SkillsDesktop extends StatelessWidget {
                         elevation: 40,
                         shadowColor: Colors.red,
                         child: Container(
-                          height: 150,
+                          height: 120,
                           width: 200,
                           padding: EdgeInsets.all(16),
                           child: Column(
@@ -65,7 +65,7 @@ class SkillsDesktop extends StatelessWidget {
                             children: [
                               Image.asset(
                                 skillItems[i]["img"],
-                                height: 80,
+                                height: 50,
                               ),
                               SizedBox(height: 8),
                               Text(
