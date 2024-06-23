@@ -1,25 +1,21 @@
 const List<Map> platformItems = [
   {
     "img": "images/android_icon.png",
-    "title": "Android Dev",
+    "title": "Android Development",
   },
   {
     "img": "images/web_icon.png",
-    "title": "Web Dev",
-  },
-  {
-    "img": "images/ios_icon.png",
-    "title": "IOS Dev",
+    "title": "Web Development",
   },
   {
     "img": "images/desktop_icon.png",
-    "title": "Desktop Dev",
+    "title": "Desktop Applications",
   }
 ];
 
 const List<Map> skillItems = [
   {
-    "img": "images/flutter.png",
+    "img": "images/Flutter.png",
     "title": "Flutter",
   },
   {
@@ -37,5 +33,13 @@ const List<Map> skillItems = [
   {
     "img": "images/Node.png",
     "title": "Node.js",
+  },
+  {
+    "img": "images/JS.png",
+    "title": "JavaScript",
+  },
+  {
+    "img": "images/GitHub.png",
+    "title": "GitHub",
   }
 ];

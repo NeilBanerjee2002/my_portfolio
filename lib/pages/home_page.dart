@@ -48,6 +48,7 @@ class _HomePageState extends State<HomePage> {
               const MainDesktop()
             else
               const MainMobile(),
+
             Container(
               height: MediaQuery.of(context).size.height,
               padding: EdgeInsets.fromLTRB(25, 20, 25, 60),
@@ -63,7 +64,7 @@ class _HomePageState extends State<HomePage> {
                         color: Colors.white),
                   ),
                   SizedBox(height: 50,),
-                  if(constraints.maxWidth > kMedDesktopWidth)
+                  if(constraints.maxWidth > KMinSize)
                     const SkillsDesktop()
                   else
                     const SkillsMobile()

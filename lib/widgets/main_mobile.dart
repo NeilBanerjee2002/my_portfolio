@@ -24,7 +24,7 @@ class MainMobile extends StatelessWidget {
           //Intro text
           const Text(
             "Neil Banerjee, Flutter Enthusiast,\nJunior Software Engineer at Zimyo,"
-                "\naspiring MERN stack developer",
+                "\nAspiring MERN stack developer",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 25,
@@ -61,7 +61,7 @@ class MainMobile extends StatelessWidget {
           Image.asset(
             "images/web-development-web-developer-web-design-software-developer-web-design-94dc52f227aff32b718ce2ef1a63089b.png",
             width: MediaQuery.of(context).size.width/2,
-            height: MediaQuery.of(context).size.height /2.5,
+            height: MediaQuery.of(context).size.height /3,
           ),
         ],
       ),
