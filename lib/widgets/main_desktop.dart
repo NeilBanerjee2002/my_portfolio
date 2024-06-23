@@ -52,7 +52,8 @@ class MainDesktop extends StatelessWidget {
                   ),
                 ],
               ),
-              Image.asset(
+              if(MediaQuery.of(context).size.width > 1000)
+                Image.asset(
                 "images/web-development-web-developer-web-design-software-developer-web-design-94dc52f227aff32b718ce2ef1a63089b.png",
                 width: MediaQuery.of(context).size.width / 2,
                 height: MediaQuery.of(context).size.height / 2,
