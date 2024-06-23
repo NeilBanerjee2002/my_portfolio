@@ -19,32 +19,49 @@ class MainMobile extends StatelessWidget {
                 Colors.white.withOpacity(0.5)
               ]).createShader(bounds);
             },
-            child: Image.asset(
-              "images/Photo with Hat.jpg",
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 4,
-            ),
             blendMode: BlendMode.srcATop,
           ),
           //Intro text
           const Text(
-            "Hi! \nI'm Neil Banerjee \nA Flutter Developer ",
+            "Neil Banerjee, Flutter Enthusiast,\nJunior Software Engineer at Zimyo,"
+                "\naspiring MERN stack developer",
             style: TextStyle(
-              fontWeight: FontWeight.w800,
-              fontSize: 17,
-              color: Colors.white,
-            ),
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
+                color: Colors.white,
+                height: 3.5),
           ),
           const SizedBox(
             height: 10,
           ),
           SizedBox(
             height: 30,
-            width: 130,
+            width: 180,
             child: ElevatedButton(
               onPressed: () {},
-              child: const Text("Get in touch"),
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.black45, // Text color
+                padding: EdgeInsets.symmetric(
+                    horizontal: 20, vertical: 10), // Padding
+                textStyle: TextStyle(
+                  fontSize: 15,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius:
+                  BorderRadius.circular(12), // Rounded corners
+                ),
+              ),
+              child: const Text("View Projects </>"),
             ),
+          ),
+          const SizedBox(
+            height: 70,
+          ),
+          Image.asset(
+            "images/web-development-web-developer-web-design-software-developer-web-design-94dc52f227aff32b718ce2ef1a63089b.png",
+            width: MediaQuery.of(context).size.width/2,
+            height: MediaQuery.of(context).size.height /2.5,
           ),
         ],
       ),

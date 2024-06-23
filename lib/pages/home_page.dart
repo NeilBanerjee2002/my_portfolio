@@ -49,19 +49,20 @@ class _HomePageState extends State<HomePage> {
             else
               const MainMobile(),
             Container(
-              height: 500,
+              height: MediaQuery.of(context).size.height,
               padding: EdgeInsets.fromLTRB(25, 20, 25, 60),
               width: MediaQuery.of(context).size.width,
-              color: Colors.blueGrey,
+              color: Colors.black,
               child: Column(
                 children: [
                   Text(
-                    "What I can do",
+                    "Skills",
                     style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
+                  SizedBox(height: 50,),
                   if(constraints.maxWidth > kMedDesktopWidth)
                     const SkillsDesktop()
                   else

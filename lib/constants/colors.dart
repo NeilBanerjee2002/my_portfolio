@@ -1,5 +1,5 @@
 import 'dart:ui';
 
 class CustomColor{
-  static const Color scaffoldBG = Color(0xffD86161);
+  static const Color scaffoldBG = Color(0xff32012F);
 }

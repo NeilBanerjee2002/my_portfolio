@@ -17,10 +17,20 @@ class HeaderDesktop extends StatelessWidget {
       decoration: kHeaderDecoraton,
       child: Row(
         children: [
-          SiteLogo(onTap: (){}),
+          SizedBox(width: 20,),
+          SiteLogo(onTap: () {}),
           const Spacer(),
-          for(int i=0; i < navTitles.length; i++)
-            TextButton(onPressed: (){}, child: Text(navTitles[i], style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w800),))
+          for (int i = 0; i < navTitles.length; i++)
+            TextButton(
+                onPressed: () {},
+                child: Text(
+                  navTitles[i],
+                  style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w800),
+                )),
+          SizedBox(width: 20,)
         ],
       ),
     );
