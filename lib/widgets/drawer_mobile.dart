@@ -22,7 +22,7 @@ class DrawerMobile extends StatelessWidget {
             for(int i=0; i<navIcons.length; i++)
               ListTile(
                 leading: Icon(navIcons[i]),
-                title: Text(navTitles[i]),
+                title: Text(navTitles[i], style: TextStyle(color: Colors.white),),
                 titleTextStyle: TextStyle(fontWeight: FontWeight.w600, fontSize: 15,),
               )
           ]

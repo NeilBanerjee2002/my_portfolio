@@ -18,8 +18,8 @@ class MainDesktop extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Neil Banerjee, Flutter Enthusiast,\nJunior Software Engineer at Zimyo,"
-                    "\nAspiring MERN stack developer",
+                    "Greetings! Myself Neil Banerjee, \nA Software Engineer at Zimyo,\nA Flutter Enthusiast"
+                        "\nand an aspiring MERN stack developer",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 25,

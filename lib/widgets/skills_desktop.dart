@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../constants/skill_items.dart';
 
 class SkillsDesktop extends StatelessWidget {
@@ -52,31 +51,39 @@ class SkillsDesktop extends StatelessWidget {
                   runSpacing: 50,
                   children: [
                     for (int i = 0; i < skillItems.length; i++)
-                      Card(
-                        surfaceTintColor: Colors.purpleAccent,
-                        elevation: 40,
-                        shadowColor: Colors.red,
-                        child: Container(
-                          height: 120,
-                          width: 200,
-                          padding: EdgeInsets.all(16),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.asset(
-                                skillItems[i]["img"],
-                                height: 50,
-                              ),
-                              SizedBox(height: 8),
-                              Text(
-                                skillItems[i]["title"],
-                                style: TextStyle(
-                                  fontSize: 20,
+                      MouseRegion(
+                        onEnter: (_) => _onHover(true, i),
+                        onExit: (_) => _onHover(false, i),
+                        child: ValueListenableBuilder<bool>(
+                          valueListenable: hoverList[i],
+                          builder: (context, isHovered, child) {
+                            return Card(
+                              elevation: isHovered ? 40 : 20,
+                              shadowColor: isHovered ? Colors.white : Colors.red,
+                              child: Container(
+                                height: 120,
+                                width: 200,
+                                padding: EdgeInsets.all(16),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      skillItems[i]["img"],
+                                      height: 50,
+                                    ),
+                                    SizedBox(height: 8),
+                                    Text(
+                                      skillItems[i]["title"],
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ],
                                 ),
-                                textAlign: TextAlign.center,
                               ),
-                            ],
-                          ),
+                            );
+                          },
                         ),
                       ),
                   ],
@@ -88,4 +95,10 @@ class SkillsDesktop extends StatelessWidget {
       },
     );
   }
+
+  void _onHover(bool isHovered, int index) {
+    hoverList[index].value = isHovered;
+  }
+
+  static final List<ValueNotifier<bool>> hoverList = List.generate(skillItems.length, (_) => ValueNotifier(false));
 }
