@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
               height: MediaQuery.of(context).size.height,
               padding: EdgeInsets.fromLTRB(25, 20, 25, 60),
               width: MediaQuery.of(context).size.width,
-              color: Colors.brown,
+              color: Color(0xFF5D0E41),
               child: SingleChildScrollView(
                 child: Column(
                   children: [
@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     SizedBox(height: 50,),
                     if(constraints.maxWidth > KMinSize)
-                      const ExperienceDesktop()
+                      ExperienceDesktop()
                     else
                       const SkillsMobile(),
                   ],

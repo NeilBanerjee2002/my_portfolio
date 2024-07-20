@@ -5,11 +5,11 @@ class MainDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 20.0),
-          height: MediaQuery.of(context).size.height,
-          constraints: BoxConstraints(minHeight: 350),
+    return Container(
+        margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 100),
+        height: MediaQuery.of(context).size.height - 120,
+        constraints: BoxConstraints(minHeight: 350),
+        child: SingleChildScrollView(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -29,6 +29,7 @@ class MainDesktop extends StatelessWidget {
                   SizedBox(
                     height: 55,
                   ),
+
                   SizedBox(
                     height: 30,
                     width: 180,
@@ -59,7 +60,7 @@ class MainDesktop extends StatelessWidget {
                 height: MediaQuery.of(context).size.height / 2,
               ),
             ],
-          )),
-    );
+          ),
+        ));
   }
 }
