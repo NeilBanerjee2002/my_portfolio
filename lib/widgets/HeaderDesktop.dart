@@ -1,20 +1,34 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/styles/style.dart';
+import 'package:portfolio/constants/colors.dart';
+
+import '../constants/navtitles.dart';
 import 'package:portfolio/widgets/sitelogo.dart';
 
-import '../constants/colors.dart';
-import '../constants/navtitles.dart';
+class HeaderDesktop extends StatefulWidget {
+  int colorIndex;
 
-class HeaderDesktop extends StatelessWidget {
-  const HeaderDesktop({super.key});
+  HeaderDesktop({super.key, required this.colorIndex});
 
+  @override
+  State<HeaderDesktop> createState() => _HeaderDesktopState();
+}
+
+class _HeaderDesktopState extends State<HeaderDesktop> {
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 50,
       width: double.maxFinite,
-      decoration: kHeaderDecoraton,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        gradient: LinearGradient(
+          colors: [
+            backgroundColors[widget.colorIndex],
+            Colors.white24,
+          ],
+        ),
+      ),
       child: Row(
         children: [
           SizedBox(width: 20,),

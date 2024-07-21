@@ -1,17 +1,14 @@
+import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:portfolio/constants/colors.dart';
-import 'package:portfolio/constants/skill_items.dart';
 import 'package:portfolio/widgets/Experience_Desktop.dart';
 import 'package:portfolio/widgets/drawer_mobile.dart';
 import 'package:portfolio/widgets/main_desktop.dart';
 import 'package:portfolio/widgets/main_mobile.dart';
 import 'package:portfolio/widgets/skills.mobile.dart';
 import 'package:portfolio/widgets/skills_desktop.dart';
-
 import '../constants/size.dart';
 import '../widgets/HeaderDesktop.dart';
 import '../widgets/HeaderMobile.dart';
@@ -25,19 +22,41 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  int colorIndex = 0;
+  Timer? _timer;
+
+  @override
+  void initState() {
+    super.initState();
+    _startColorChangeAnimation();
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  void _startColorChangeAnimation() {
+    _timer = Timer.periodic(const Duration(milliseconds: 2000), (timer) {
+      setState(() {
+        colorIndex = ((colorIndex + 1) % backgroundColors.length);
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
         key: scaffoldKey,
-        backgroundColor: CustomColor.scaffoldBG,
+        backgroundColor: backgroundColors[colorIndex],
         endDrawer: const DrawerMobile(),
         body: ListView(
           scrollDirection: Axis.vertical,
           children: [
             if (constraints.maxWidth > KMinSize)
-              const HeaderDesktop()
+              HeaderDesktop(colorIndex: colorIndex,)
             else
               HeaderMobile(
                 onMenuTap: () {
@@ -104,3 +123,5 @@ class _HomePageState extends State<HomePage> {
     });
   }
 }
+
+

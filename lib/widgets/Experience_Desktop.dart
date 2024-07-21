@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/styles/style.dart';
 import 'package:portfolio/widgets/sitelogo.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:html';
