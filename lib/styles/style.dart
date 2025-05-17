@@ -8,8 +8,8 @@ import '../constants/colors.dart';
     borderRadius: BorderRadius.circular(12),
     gradient: const LinearGradient(
         colors: [
-          Colors.red,
-          Colors.white24
+          Colors.black,
+          Colors.white
         ]
     )
 );
