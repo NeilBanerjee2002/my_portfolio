@@ -19,7 +19,7 @@ class MainDesktop extends StatelessWidget {
                 children: [
                   Text(
                     "Greetings! Myself Neil Banerjee, \nA Software Engineer at Zimyo,\nA Flutter Enthusiast"
-                        "\nand an aspiring MERN stack developer",
+                        "\nand a MERN stack developer",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 25,
@@ -37,7 +37,7 @@ class MainDesktop extends StatelessWidget {
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.white,
-                        backgroundColor: Colors.black45, // Text color
+                        backgroundColor: Colors.blueGrey, // Text color
                         padding: EdgeInsets.symmetric(
                             horizontal: 20, vertical: 10), // Padding
                         textStyle: TextStyle(

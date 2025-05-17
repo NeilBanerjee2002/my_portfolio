@@ -24,7 +24,7 @@ class _HeaderDesktopState extends State<HeaderDesktop> {
         borderRadius: BorderRadius.circular(12),
         gradient: LinearGradient(
           colors: [
-            backgroundColors[widget.colorIndex],
+            Colors.black,
             Colors.white24,
           ],
         ),

@@ -9,7 +9,7 @@ class SiteLogo extends StatelessWidget {
     return GestureDetector(
         onTap: () {},
         child: const Text(
-          "NB Neil Banerjee",
+          "Neil Banerjee",
           style: TextStyle(
             fontSize: 15,
             fontWeight: FontWeight.w800,

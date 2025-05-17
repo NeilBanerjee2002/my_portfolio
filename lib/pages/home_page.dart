@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    _startColorChangeAnimation();
+    // _startColorChangeAnimation();
   }
 
   @override
@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
         key: scaffoldKey,
-        backgroundColor: backgroundColors[colorIndex],
+        backgroundColor: Colors.black,
         endDrawer: const DrawerMobile(),
         body: ListView(
           scrollDirection: Axis.vertical,
@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
               height: MediaQuery.of(context).size.height,
               padding: EdgeInsets.fromLTRB(25, 20, 25, 60),
               width: MediaQuery.of(context).size.width,
-              color: Color(0xFF5D0E41),
+              color: Colors.black,
               child: SingleChildScrollView(
                 child: Column(
                   children: [
